@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rez/outSourcing/bottomBar.dart';
 import 'package:rez/outSourcing/header.dart';
 
 import '../../models/declarationValues.dart';

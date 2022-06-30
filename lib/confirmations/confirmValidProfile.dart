@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import '../../composants/bottomBar.dart';
+import 'package:rez/outSourcing/bottomBar.dart';
 
 class ConfirmValidProfil extends StatefulWidget {
   @override

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
 import '../../models/declarationValues.dart';
-import '../../datas/data.dart' as data;
+import 'package:rez/data/data.dart' as data;
 import 'oneWidgetResto.dart';
 
 class CallWidgetResto extends StatefulWidget {

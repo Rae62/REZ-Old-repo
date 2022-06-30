@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:rez/outSourcing/bottomBar.dart';
+import 'package:rez/outSourcing/header.dart';
 
 import '../../models/declarationValues.dart';
-import '../../datas/data.dart' as data;
+import 'package:rez/data/data.dart' as data;
 import 'oneWidgetPlat.dart';
-import '../../composants/header.dart';
-import '../../composants/bottomBar.dart';
-
-
 
 class CallWidgetPlat extends StatefulWidget {
   final List<ToDo> tovisit = data.tovisit;
@@ -26,7 +24,7 @@ class _CallWidgetPlatState extends State<CallWidgetPlat>
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-           Header(),
+            Header(),
             Container(
               child: TabBar(
                   labelColor: Color.fromARGB(255, 239, 113, 90),
@@ -85,7 +83,7 @@ class _CallWidgetPlatState extends State<CallWidgetPlat>
           ],
         ),
       ),
-    bottomNavigationBar: BottomBar(),
+      bottomNavigationBar: BottomBar(),
     );
   }
 }

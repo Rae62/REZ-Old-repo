@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:rez/account/Historique/orderHistory.dart';
 import 'package:rez/account/Paiement/payment.dart';
 import 'package:rez/account/Update/UpdateScreen.dart';
+import 'package:rez/addtionalData/faq/faqList.dart';
+import 'package:rez/addtionalData/mentions_l%C3%A9gales/mentionslist.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);

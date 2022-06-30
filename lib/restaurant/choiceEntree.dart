@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:rez/outSourcing/bottomBar.dart';
+import 'package:rez/outSourcing/header.dart';
 
 import '../../models/declarationValues.dart';
-import '../../datas/data.dart' as data;
+
 import 'oneWidgetEntree.dart';
-import '../../composants/header.dart';
-import '../../composants/bottomBar.dart';
+import 'package:rez/data/data.dart' as data;
 
 class CallWidgetEntree extends StatefulWidget {
   final List<ToDo> tovisit = data.tovisit;
@@ -24,7 +25,7 @@ class _CallWidgetEntreeState extends State<CallWidgetEntree>
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-             Header(),
+            Header(),
             Container(
               child: TabBar(
                   labelColor: Color.fromARGB(255, 239, 113, 90),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:muselight/models/declarationValues.dart';
+
+import 'package:rez/models/declarationValues.dart';
 
 class OneWidgetResto extends StatelessWidget {
   // attributs
