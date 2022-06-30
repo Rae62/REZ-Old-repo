@@ -3,11 +3,11 @@ import 'package:table_calendar/table_calendar.dart';
 
 //selected day for event
 // void _onDaySelected(DateTime selectedDay, DateTime focusedDay) {
-  // if (!isSameDay(_selectedDay, selectedDay)) {
-  //   setState(() {
-  //     _focusedDay = focusedDay;
-  //     _selectedDay = selectedDay;
-  //     _selectedEvents = _getEventsForDay(selectedDay);
+// if (!isSameDay(_selectedDay, selectedDay)) {
+//   setState(() {
+//     _focusedDay = focusedDay;
+//     _selectedDay = selectedDay;
+//     _selectedEvents = _getEventsForDay(selectedDay);
 //     });
 //   }
 // }

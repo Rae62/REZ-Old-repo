@@ -1,10 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:rezapp/Profile/Historique/orderHistory.dart';
-import 'package:rezapp/Profile/Paiement/payment.dart';
-import 'package:rezapp/Profile/Update/updateScreen.dart';
-import 'package:rezapp/user_pages/faq/faqlist.dart';
-import 'package:rezapp/user_pages/mentions_l%C3%A9gales/mentionslist.dart';
+import 'package:rez/account/Historique/orderHistory.dart';
+import 'package:rez/account/Paiement/payment.dart';
+import 'package:rez/account/Update/UpdateScreen.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -81,12 +79,12 @@ class Body extends StatelessWidget {
           ProfileMenu(
             text: "Paiement",
             press: () {
-                      Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => Paiement(),
-                  ),
-                );
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Paiement(),
+                ),
+              );
             },
           ),
           Divider(
@@ -96,15 +94,16 @@ class Body extends StatelessWidget {
             endIndent: 30,
             color: Colors.black,
           ),
-          ProfileMenu(text: "Historique des commandes", press: () {
-                            Navigator.push(
+          ProfileMenu(
+              text: "Historique des commandes",
+              press: () {
+                Navigator.push(
                   context,
                   MaterialPageRoute(
                     builder: (context) => OrderHistory(),
                   ),
                 );
-
-          }),
+              }),
           Divider(
             height: 20,
             thickness: 1,
@@ -201,29 +200,29 @@ class ButtonLogout extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Padding(
-        padding: EdgeInsets.all(8),
-        child: Center(child: Container(child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SizedBox(
-              
-              height: 50,
-              width: 300,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: ElevatedButton(
-                  onPressed: (){}, 
-                  child: Text('Déconnexion'),
-                  style: ElevatedButton.styleFrom(
-                    primary: Color.fromARGB(255, 239, 113, 90),
+          padding: EdgeInsets.all(8),
+          child: Center(
+            child: Container(
+                child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  height: 50,
+                  width: 300,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text('Déconnexion'),
+                      style: ElevatedButton.styleFrom(
+                        primary: Color.fromARGB(255, 239, 113, 90),
+                      ),
+                    ),
                   ),
-                  ),
-              ),
-            )
-          ],
-        )),)
-      ),
-      
+                )
+              ],
+            )),
+          )),
     );
   }
 }

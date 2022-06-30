@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rezapp/Profile/Update/bodyUpdate.dart';
 import 'bodyUpdate.dart';
 
 class UpdateScreen extends StatelessWidget {

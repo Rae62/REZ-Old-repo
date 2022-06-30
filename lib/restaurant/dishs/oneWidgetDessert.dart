@@ -1,14 +1,11 @@
-
 import 'package:flutter/material.dart';
-import 'package:muselight/models/declarationValues.dart';
+import 'package:rez/models/declarationValues.dart';
 
-
-
-class OneWidgetBoisson extends StatelessWidget {
+class OneWidgetDessert extends StatelessWidget {
   // attributs
   final ToDo todo;
 
-  OneWidgetBoisson({required this.todo});
+  OneWidgetDessert({required this.todo});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +24,7 @@ class OneWidgetBoisson extends StatelessWidget {
                 image: DecorationImage(
                   fit: BoxFit.contain,
                   alignment: Alignment.centerLeft,
-                  image: NetworkImage(todo.imageBoisson),
+                  image: NetworkImage(todo.imageDessert),
                 ),
               ),
             ),

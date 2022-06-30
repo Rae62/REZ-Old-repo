@@ -1,51 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:rez/account/favorites/favoris_card.dart';
-import 'package:rez/models/todoModel.dart';
-import 'package:rez/data/data-favoris.dart' as data;
+import 'package:rez/outSourcing/header.dart';
 
-class Home extends StatefulWidget {
-  final List tovisit = data.tovisit;
+import '../../models/declarationValues.dart';
+import 'package:rez/data/data.dart' as data;
+import 'oneWidgetBoisson.dart';
+
+class CallWidgetBoisson extends StatefulWidget {
+  final List<ToDo> tovisit = data.tovisit;
 
   @override
-  State<Home> createState() => _HomeState();
+  State<CallWidgetBoisson> createState() => _CallWidgetBoissonState();
 }
 
-class _HomeState extends State<Home> with TickerProviderStateMixin {
+class _CallWidgetBoissonState extends State<CallWidgetBoisson>
+    with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     TabController controller =
-        new TabController(initialIndex: 0, length: 3, vsync: this);
+        new TabController(initialIndex: 0, length: 4, vsync: this);
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 234, 232, 232),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
-            Container(
-              margin: EdgeInsets.fromLTRB(0, 0, 150, 20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  IconButton(
-                    icon: Icon(Icons.arrow_back),
-                    onPressed: () {},
-                    color: Colors.black,
-                    iconSize: 30.0,
-                  ),
-                  Container(
-                    child: Text(
-                      "Favoris",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Color.fromARGB(255, 0, 0, 0),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            Header(),
             Container(
               child: TabBar(
                   labelColor: Color.fromARGB(255, 239, 113, 90),
@@ -53,12 +31,12 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                   indicatorColor: Color.fromARGB(255, 239, 113, 90),
                   isScrollable: true,
                   controller: controller,
-                  indicatorWeight: 3,
+                  indicatorWeight: 4,
                   labelStyle: TextStyle(fontSize: 16),
                   tabs: <Widget>[
                     Tab(
                       child: Text(
-                        'RESTO',
+                        'ENTREES',
                         style: TextStyle(
                             fontFamily: "BarlowBold",
                             fontWeight: FontWeight.bold),
@@ -66,7 +44,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                     ),
                     Tab(
                       child: Text(
-                        'MENU',
+                        'PLATS',
                         style: TextStyle(
                             fontFamily: "BarlowBold",
                             fontWeight: FontWeight.bold),
@@ -74,7 +52,15 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                     ),
                     Tab(
                       child: Text(
-                        'EVENEMENT',
+                        'DESSERTS',
+                        style: TextStyle(
+                            fontFamily: "BarlowBold",
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Tab(
+                      child: Text(
+                        'BOISSONS',
                         style: TextStyle(
                             fontFamily: "BarlowBold",
                             fontWeight: FontWeight.bold),
@@ -87,15 +73,16 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
-                    return FavorisCard(
+                    return OneWidgetBoisson(
                       todo: widget.tovisit[index],
                     );
                   },
                   itemCount: widget.tovisit.length),
-            ),
+            )
           ],
         ),
       ),
+      bottomNavigationBar: BottomBar(),
     );
   }
 }

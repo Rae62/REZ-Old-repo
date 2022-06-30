@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:rezapp/Profile/Update/customTextField.dart';
-import 'package:rezapp/Profile/Update/updateScreen.dart';
 
 class BodyUpdate extends StatelessWidget {
   const BodyUpdate({Key? key}) : super(key: key);

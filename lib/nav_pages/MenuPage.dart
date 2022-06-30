@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/material/bottom_navigation_bar.dart';
-import 'package:rezapp/Profile/profileScreen.dart';
-import 'package:rezapp/home/home.dart';
-import 'package:rezapp/nav_pages/cart.dart';
-import 'package:rezapp/nav_pages/calendar.dart';
-import 'package:rezapp/nav_pages/seachPage.dart';
-// import 'package:rezapp/nav_pages/user_item_page.dart';
+import 'package:rez/account/ProfileScreen.dart';
+import 'package:rez/nav_pages/Calendar.dart';
+import 'package:rez/nav_pages/Cart.dart';
+import 'package:rez/nav_pages/SeachPage.dart';
 
+// import 'package:rezapp/nav_pages/user_item_page.dart';
 
 class MenuPage extends StatefulWidget {
   MenuPage({Key? key}) : super(key: key);
@@ -17,7 +16,7 @@ class MenuPage extends StatefulWidget {
 
 class _MenuPageState extends State<MenuPage> {
   List pages = [
-    HomePage(),
+    // HomePage(),
     SearchPage(),
     CalendarPage(),
     CartPage(),
@@ -50,12 +49,24 @@ class _MenuPageState extends State<MenuPage> {
           showUnselectedLabels: false,
           elevation: 0,
           items: const <BottomNavigationBarItem>[
-            BottomNavigationBarItem(label: "Menu", icon: Icon(Icons.home, size: 28,)),
-            BottomNavigationBarItem(label: "Search", icon: Icon(Icons.search, size: 28)),
-            BottomNavigationBarItem(label: "Calendar", icon: Icon(Icons.calendar_month, size: 28)),
             BottomNavigationBarItem(
-                label: "Basket", icon: Icon(Icons.shopping_cart, size: 28,)),
-            BottomNavigationBarItem(label: "User", icon: Icon(Icons.person, size: 28))
+                label: "Menu",
+                icon: Icon(
+                  Icons.home,
+                  size: 28,
+                )),
+            BottomNavigationBarItem(
+                label: "Search", icon: Icon(Icons.search, size: 28)),
+            BottomNavigationBarItem(
+                label: "Calendar", icon: Icon(Icons.calendar_month, size: 28)),
+            BottomNavigationBarItem(
+                label: "Basket",
+                icon: Icon(
+                  Icons.shopping_cart,
+                  size: 28,
+                )),
+            BottomNavigationBarItem(
+                label: "User", icon: Icon(Icons.person, size: 28))
           ],
         ));
   }
