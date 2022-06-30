@@ -1,4 +1,4 @@
-import 'package:muselight/models/todoModel.dart';
+import 'package:rez/models/todoModel.dart';
 
 List<ToDo> tovisit = [
   ToDo(

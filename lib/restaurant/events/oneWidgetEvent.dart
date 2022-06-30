@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:rez/models/todoModel.dart';
-import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:rez/models/declarationValues.dart';
 
-class FavorisCard extends StatelessWidget {
+class OneWidgetEvent extends StatelessWidget {
   // attributs
   final ToDo todo;
 
-  FavorisCard({required this.todo});
+  OneWidgetEvent({required this.todo});
 
   @override
   Widget build(BuildContext context) {
     return Card(
+      margin: EdgeInsets.fromLTRB(10, 0, 10, 10),
       child: Container(
         padding: EdgeInsets.all(10),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Container(
-              height: 75,
-              width: 100,
+              height: 100,
+              width: 150,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(13),
                 image: DecorationImage(
-                  fit: BoxFit.fill,
+                  fit: BoxFit.contain,
                   alignment: Alignment.centerLeft,
                   image: NetworkImage(todo.image),
                 ),
@@ -41,21 +41,6 @@ class FavorisCard extends StatelessWidget {
                   style: TextStyle(fontSize: 12),
                 ),
                 Text('4.7/5 (214 votes)'),
-                RatingBar.builder(
-                  initialRating: 3,
-                  itemSize: 20,
-                  minRating: 1,
-                  direction: Axis.horizontal,
-                  allowHalfRating: true,
-                  itemCount: 5,
-                  itemBuilder: (context, _) => Icon(
-                    Icons.star,
-                    color: Color.fromARGB(255, 239, 113, 90),
-                  ),
-                  onRatingUpdate: (rating) {
-                    print(rating);
-                  },
-                ),
               ],
 
               // mainAxisAlignment: MainAxisAlignment.start,
@@ -64,7 +49,7 @@ class FavorisCard extends StatelessWidget {
             Container(
               child: IconButton(
                 icon: Icon(
-                  Icons.favorite_rounded,
+                  Icons.shopping_cart,
                   color: Color.fromARGB(255, 239, 113, 90),
                 ),
                 color: Colors.grey,

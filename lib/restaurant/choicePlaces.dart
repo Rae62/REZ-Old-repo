@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:muselight/composants/header.dart';
+import 'package:rez/outSourcing/header.dart';
 
 import '../../models/declarationValues.dart';
-import '../../datas/data.dart' as data;
-import '../../composants/header.dart';
-import '../../composants/bottomBar.dart';
+import 'package:rez/data/data.dart' as data;
 
 class ChoicePlaces extends StatefulWidget {
   final List<ToDo> tovisit = data.tovisit;

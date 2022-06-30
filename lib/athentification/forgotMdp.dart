@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import '../../composants/header.dart';
 import '../../models/declarationValues.dart';
-import '../../datas/data.dart' as data;
+import 'package:rez/data/data.dart' as data;
 
 class ForgotMdp extends StatefulWidget {
   final List<ToDo> tovisit = data.tovisit;

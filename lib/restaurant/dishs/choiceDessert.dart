@@ -1,20 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:muselight/composants/header.dart';
+import 'package:rez/outSourcing/header.dart';
 
 import '../../models/declarationValues.dart';
-import '../../datas/data.dart' as data;
-import 'oneWidgetBoisson.dart';
-import '../../composants/header.dart';
-import '../../composants/bottomBar.dart';
+import 'package:rez/data/data.dart' as data;
 
-class CallWidgetBoisson extends StatefulWidget {
+import 'oneWidgetDessert.dart';
+
+class CallWidgetDessert extends StatefulWidget {
   final List<ToDo> tovisit = data.tovisit;
 
   @override
-  State<CallWidgetBoisson> createState() => _CallWidgetBoissonState();
+  State<CallWidgetDessert> createState() => _CallWidgetDessertState();
 }
 
-class _CallWidgetBoissonState extends State<CallWidgetBoisson>
+class _CallWidgetDessertState extends State<CallWidgetDessert>
     with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
@@ -75,7 +74,7 @@ class _CallWidgetBoissonState extends State<CallWidgetBoisson>
                   physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemBuilder: (context, index) {
-                    return OneWidgetBoisson(
+                    return OneWidgetDessert(
                       todo: widget.tovisit[index],
                     );
                   },
@@ -84,7 +83,7 @@ class _CallWidgetBoissonState extends State<CallWidgetBoisson>
           ],
         ),
       ),
-       bottomNavigationBar: BottomBar(),
+      bottomNavigationBar: BottomBar(),
     );
   }
 }

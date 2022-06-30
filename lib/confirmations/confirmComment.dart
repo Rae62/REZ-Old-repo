@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import '../../composants/bottomBar.dart';
 
 class CommentConfirm extends StatefulWidget {
   @override

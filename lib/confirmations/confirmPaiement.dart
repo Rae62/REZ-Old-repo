@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../../composants/bottomBar.dart';
 
 class ConfirmPaiement extends StatefulWidget {
   @override
